@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <base target="_top">
+    <?!= include('Style'); ?>
+  </head>
+  <body>
+    <div id="header">
+      <div id="score">
+          &#9989;<label id="correct">00</label>
+          &#10060;<label id="incorrect">00</label>
+      </div>
+      <div id="remaining">
+        Left:<label id="left">100</label>
+      </div>
+    </div>
+    <div id="container">
+      <div id="question"></div>
+      <div id="buttons">
+        <table><tr>
+          <td><button type="button" id="correct" onclick="displayNextCard(true)">Correct?</button></td>
+          <td><button type="button" id="answerButton" onclick="toggleAnswer()">Toggle answer</button></td>
+          <td><button type="button" id="incorrect" onclick="displayNextCard(false)">Incorrect?</button></td>
+        </tr></table>
+      </div>
+      <div id="answer"></div>
+    </div>
+    <script src="data.js"></script>
+    <script src="fe.js"></script>
+  </body>
+</html>
